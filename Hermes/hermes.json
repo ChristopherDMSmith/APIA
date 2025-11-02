@@ -92,6 +92,10 @@
 							"main.js": {
 								"type": "file",
 								"path": "/hermes/scripts/main.js"
+							},
+							"bg.js": {
+								"type": "file",
+								"path": "/hermes/scripts/bg.js"
 							}
 						}
 					},
@@ -219,7 +223,7 @@
 				"1": "Enabled multi-text body parameter limit functionality to assist with staying within service limits",
 				"2": "Enhanced API Library and response section to support limited export to CSV functionality",
 				"3": "Added 'Setup - Timekeeping Combined Pay Codes' to the API library",
-				"5": "Added 'Setup - Business Structure Labor Category Entries' to the API library",			
+				"5": "Added 'Setup - Business Structure Labor Category Entries' to the API library",
 				"6": "Added 'Setup - Activitiy Profiles' to the API library",
 				"7": "Added 'Setup - Attendance Profiles' to the API library",
 				"8": "Added 'Persons - Pay Period Time Spans' to the API library",
