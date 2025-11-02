@@ -1,0 +1,208 @@
+{
+	"themes": {
+		"hermes": {
+			"name": "Hermes",
+			"colors": {
+				"primary-color": "#E0E0E0",
+				"secondary-color": "#B0B0B0",
+				"accent-color": "#00274D",
+				"highlight-color": "#0059B3",
+				"buttontext-color": "#F5F5F5"
+			},
+			"fonts": {
+				"font-family-primary": "Trebuchet MS",
+				"font-family-fallback": "Helvetica",
+				"title-font-primary": "Caesar Dressing",
+				"title-font-fallback": "cursive"
+			},
+			"paletteUrl": "https://colordesigner.io/color-palette-builder?mode=lch#E0E0E0-B0B0B0-00264D-0059B3-F5F5F5"
+		},
+		"crimsonLedger": {
+			"name": "Crimson Ledger",
+			"colors": {
+				"primary-color": "#FFFFFF",
+				"secondary-color": "#FFF1F1",
+				"accent-color": "#9B1C1C",
+				"highlight-color": "#C53030",
+				"buttontext-color": "#FFFFFF"
+			},
+			"fonts": {
+				"font-family-primary": "Trebuchet MS",
+				"font-family-fallback": "Helvetica",
+				"title-font-primary": "Caesar Dressing",
+				"title-font-fallback": "cursive"
+			},
+			"paletteUrl": "https://colordesigner.io/color-palette-builder?mode=lch&steps=10&him=constant#FFFFFF-FFF1F1-9B1C1C-C53030-FFFFFF"
+		},
+		"arctic": {
+			"name": "Arctic",
+			"colors": {
+				"primary-color": "#FFFFFF",
+				"secondary-color": "#F7FAFC",
+				"accent-color": "#1A365D",
+				"highlight-color": "#2B6CB0",
+				"buttontext-color": "#FFFFFF"
+			},
+			"fonts": {
+				"font-family-primary": "Trebuchet MS",
+				"font-family-fallback": "Helvetica",
+				"title-font-primary": "Caesar Dressing",
+				"title-font-fallback": "cursive"
+			},
+			"paletteUrl": ""
+		},
+		"solar": {
+			"name": "Solar",
+			"colors": {
+				"primary-color": "#FFFFFF",
+				"secondary-color": "#FFF7E6",
+				"accent-color": "#C2410C",
+				"highlight-color": "#EA580C",
+				"buttontext-color": "#FFFFFF"
+			},
+			"fonts": {
+				"font-family-primary": "Trebuchet MS",
+				"font-family-fallback": "Helvetica",
+				"title-font-primary": "Caesar Dressing",
+				"title-font-fallback": "cursive"
+			},
+			"paletteUrl": "https://colordesigner.io/color-palette-builder?mode=lch&steps=10&him=constant#FFFFFF-FFF7E6-C2410C-EA580C-FFFFFF"
+		},
+		"sageMeadow": {
+			"name": "Sage Meadow",
+			"colors": {
+				"primary-color": "#F3F7F4",
+				"secondary-color": "#E9F3EE",
+				"accent-color": "#2F6D5B",
+				"highlight-color": "#4FA58B",
+				"buttontext-color": "#FFFFFF"
+			},
+			"fonts": {
+				"font-family-primary": "Trebuchet MS",
+				"font-family-fallback": "Helvetica",
+				"title-font-primary": "Caesar Dressing",
+				"title-font-fallback": "cursive"
+			},
+			"paletteUrl": "https://colordesigner.io/color-palette-builder?mode=lch&steps=10&him=constant#F3F7F4-E9F3EE-2F6D5B-4FA58B-FFFFFF"
+		},
+		"plumAura": {
+			"name": "Plum Aura",
+			"colors": {
+				"primary-color": "#FFFFFF",
+				"secondary-color": "#F6F0FA",
+				"accent-color": "#4C3565",
+				"highlight-color": "#A167FF",
+				"buttontext-color": "#FFFFFF"
+			},
+			"fonts": {
+				"font-family-primary": "Trebuchet MS",
+				"font-family-fallback": "Helvetica",
+				"title-font-primary": "Caesar Dressing",
+				"title-font-fallback": "cursive"
+			},
+			"paletteUrl": "https://colordesigner.io/color-palette-builder?mode=lch&steps=10&him=constant#FFFFFF-F6F0FA-4C3565-A167FF-FFFFFF"
+		},
+		"auburn": {
+			"name": "Auburn",
+			"colors": {
+				"primary-color": "#FFFFFF",
+				"secondary-color": "#F9F5F2",
+				"accent-color": "#7C2D12",
+				"highlight-color": "#BA421A",
+				"buttontext-color": "#FFFFFF"
+			},
+			"fonts": {
+				"font-family-primary": "Trebuchet MS",
+				"font-family-fallback": "Helvetica",
+				"title-font-primary": "Caesar Dressing",
+				"title-font-fallback": "cursive"
+			},
+			"paletteUrl": "https://colordesigner.io/color-palette-builder?mode=lch&steps=10&him=constant#FFFFFF-F9F5F2-7C2D12-BA421A-FFFFFF"
+		},
+		"graphite": {
+			"name": "Graphite",
+			"colors": {
+				"primary-color": "#3A3A3A",
+				"secondary-color": "#2B2B2B",
+				"accent-color": "#E5E7EB",
+				"highlight-color": "#B8C4D1",
+				"buttontext-color": "#111827"
+			},
+			"fonts": {
+				"font-family-primary": "Trebuchet MS",
+				"font-family-fallback": "Helvetica",
+				"title-font-primary": "Caesar Dressing",
+				"title-font-fallback": "cursive"
+			},
+			"paletteUrl": "https://colordesigner.io/color-palette-builder?mode=lch&steps=10&him=constant#3A3A3A-2B2B2B-E5E7EB-B8C4D1-111827"
+		},
+		"sandstone": {
+			"name": "Sandstone",
+			"colors": {
+				"primary-color": "#FFFFFF",
+				"secondary-color": "#F3F0E7",
+				"accent-color": "#6B4F2A",
+				"highlight-color": "#8B6C3E",
+				"buttontext-color": "#FFFFFF"
+			},
+			"fonts": {
+				"font-family-primary": "Trebuchet MS",
+				"font-family-fallback": "Helvetica",
+				"title-font-primary": "Caesar Dressing",
+				"title-font-fallback": "cursive"
+			},
+			"paletteUrl": "https://colordesigner.io/color-palette-builder?mode=lch&steps=10&him=constant#FFFFFF-F3F0E7-6B4F2A-8B6C3E-FFFFFF"
+		},
+		"highContrastGreen": {
+			"name": "HC Green",
+			"colors": {
+				"primary-color": "#000000",
+				"secondary-color": "#000000",
+				"accent-color": "#00FF23",
+				"highlight-color": "#71ff63",
+				"buttontext-color": "#000000"
+			},
+			"fonts": {
+				"font-family-primary": "Trebuchet MS",
+				"font-family-fallback": "Helvetica",
+				"title-font-primary": "Caesar Dressing",
+				"title-font-fallback": "cursive"
+			},
+			"paletteUrl": "https://colordesigner.io/color-palette-builder?mode=lch&steps=10&him=constant#000000-000000-00FF23-71ff63-000000"
+		},
+		"highContrastPurple": {
+			"name": "HC Purple",
+			"colors": {
+				"primary-color": "#000000",
+				"secondary-color": "#000000",
+				"accent-color": "#9C27B0",
+				"highlight-color": "#9F63C4",
+				"buttontext-color": "#000000"
+			},
+			"fonts": {
+				"font-family-primary": "Trebuchet MS",
+				"font-family-fallback": "Helvetica",
+				"title-font-primary": "Caesar Dressing",
+				"title-font-fallback": "cursive"
+			},
+			"paletteUrl": "https://colordesigner.io/color-palette-builder?mode=lch&steps=10&him=constant#000000-000000-9C27B0-9F63C4-000000"
+		},
+		"highContrastYellow": {
+			"name": "HC Yellow",
+			"colors": {
+				"primary-color": "#111111",
+				"secondary-color": "#111111",
+				"accent-color": "#FFD600",
+				"highlight-color": "#FFEA80",
+				"buttontext-color": "#000000"
+			},
+			"fonts": {
+				"font-family-primary": "Trebuchet MS",
+				"font-family-fallback": "Helvetica",
+				"title-font-primary": "Caesar Dressing",
+				"title-font-fallback": "cursive"
+			},
+			"paletteUrl": "https://colordesigner.io/color-palette-builder?mode=lch&steps=10&him=constant#111111-000000-FFD600-FFEA80-000000"
+		}
+	}
+}

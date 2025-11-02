@@ -1,0 +1,243 @@
+{
+	"themes": {
+		"hermes": {
+			"name": "Hermes",
+			"colors": {
+				"primary-color":  "#E0E0E0",
+				"secondary-color":  "#B0B0B0",
+				"accent-color":  "#00274D",
+				"highlight-color":  "#0059B3",
+				"buttontext-color":  "#F5F5F5"
+			},
+			"fonts": {
+				"font-family-primary": "Trebuchet MS",
+				"font-family-fallback": "Helvetica",
+				"title-font-primary": "Caesar Dressing",
+				"title-font-fallback": "cursive"
+			},
+			"paletteUrl": "https://colordesigner.io/color-palette-builder?mode=lch#E0E0E0-B0B0B0-00264D-0059B3-F5F5F5"
+		},
+		"bavannahSunana": {
+			"name": "Bavannah Sunana",
+			"colors": {
+				"primary-color":  "#FACC00",
+				"secondary-color":  "#81BB44",
+				"accent-color":  "#1E2D57",
+				"highlight-color":  "#4467C6",
+				"buttontext-color":  "#F0F0F0"
+			},
+			"fonts": {
+				"font-family-primary": "Trebuchet MS",
+				"font-family-fallback": "Helvetica",
+				"title-font-primary": "Caesar Dressing",
+				"title-font-fallback": "cursive"
+			},
+			"paletteUrl": "https://colordesigner.io/color-palette-builder?mode=lch#FACC00-81BB44-1E2D57-4467C6-F0F0F0"
+		},
+		"crimsonEdge": {
+			"name": "Crimson Edge",
+			"colors": {
+				"primary-color":  "#C2BFAD",
+				"secondary-color":  "#B29576",
+				"accent-color":  "#831113",
+				"highlight-color":  "#C13E3E",
+				"buttontext-color":  "#E2E2E2"
+			},
+			"fonts": {
+				"font-family-primary": "Trebuchet MS",
+				"font-family-fallback": "Helvetica",
+				"title-font-primary": "Caesar Dressing",
+				"title-font-fallback": "cursive"
+			},
+			"paletteUrl": "https://colordesigner.io/color-palette-builder?mode=lch#C2BFAD-B29576-831113-C13E3E-E3E3E3"
+		},
+		"darthRaider": {
+			"name": "Darth Raider",
+			"colors": {
+				"primary-color":  "#DEDEDE",
+				"secondary-color":  "#242424",
+				"accent-color":  "#000000",
+				"highlight-color":  "#FF0000",
+				"buttontext-color":  "#F5F5F5"
+			},
+			"fonts": {
+				"font-family-primary": "Trebuchet MS",
+				"font-family-fallback": "Helvetica",
+				"title-font-primary": "Caesar Dressing",
+				"title-font-fallback": "cursive"
+			},
+			"paletteUrl": "https://colordesigner.io/color-palette-builder?mode=lch#DEDEDE-242424-000000-FF0000-F5F5F5"
+		},
+		"diablos": {
+			"name": "Diablos",
+			"colors": {
+				"primary-color":  "#2C2C2C",
+				"secondary-color":  "#0D0D0D",
+				"accent-color":  "#E63746",
+				"highlight-color":  "#016A37",
+				"buttontext-color":  "#FFFFFF"
+			},
+			"fonts": {
+				"font-family-primary": "Trebuchet MS",
+				"font-family-fallback": "Helvetica",
+				"title-font-primary": "Caesar Dressing",
+				"title-font-fallback": "cursive"
+			},
+			"paletteUrl": "https://colordesigner.io/color-palette-builder?mode=lch#2B2B2B-0D0D0D-E63746-016A37-FFFFFF"
+		},
+		"easterMorning": {
+			"name": "Easter Morning",
+			"colors": {
+				"primary-color":  "#F4F0FA",
+				"secondary-color":  "#D5CBE8",
+				"accent-color":  "#725991",
+				"highlight-color":  "#5C9A5B",
+				"buttontext-color":  "#FFFAB7"
+			},
+			"fonts": {
+				"font-family-primary": "Trebuchet MS",
+				"font-family-fallback": "Helvetica",
+				"title-font-primary": "Caesar Dressing",
+				"title-font-fallback": "cursive"
+			},
+			"paletteUrl": "https://colordesigner.io/color-palette-builder?mode=lch#F4F0FA-D4CAE8-725991-5C9A5B-FFFAB7"
+		},
+		"factory": {
+			"name": "Factory",
+			"colors": {
+				"primary-color":  "#F2F2F2",
+				"secondary-color":  "#5B5043",
+				"accent-color":  "#FF7729",
+				"highlight-color":  "#E09D00",
+				"buttontext-color":  "#2C2C2C"
+			},
+			"fonts": {
+				"font-family-primary": "Trebuchet MS",
+				"font-family-fallback": "Helvetica",
+				"title-font-primary": "Caesar Dressing",
+				"title-font-fallback": "cursive"
+			},
+			"paletteUrl": "https://colordesigner.io/color-palette-builder?mode=lch#F2F2F2-5B5043-FF7729-E09D00-2B2B2B"
+		},
+		"hydra": {
+			"name": "Hydra",
+			"colors": {
+				"primary-color":  "#9ADADA",
+				"secondary-color":  "#355464",
+				"accent-color":  "#001629",
+				"highlight-color":  "#E9072D",
+				"buttontext-color":  "#F5F5F5"
+			},
+			"fonts": {
+				"font-family-primary": "Trebuchet MS",
+				"font-family-fallback": "Helvetica",
+				"title-font-primary": "Caesar Dressing",
+				"title-font-fallback": "cursive"
+			},
+			"paletteUrl": "https://colordesigner.io/color-palette-builder?mode=lch#9ADADA-355464-001629-E9072D-F5F5F5"
+		},
+
+		"largerLeopard": {
+			"name": "Larger Leopard",
+			"colors": {
+				"primary-color":  "#333333",
+				"secondary-color":  "#FFC700",
+				"accent-color":  "#12A6BA",
+				"highlight-color":  "#998254",
+				"buttontext-color":  "#000000"
+			},
+			"fonts": {
+				"font-family-primary": "Trebuchet MS",
+				"font-family-fallback": "Helvetica",
+				"title-font-primary": "Caesar Dressing",
+				"title-font-fallback": "cursive"
+			},
+			"paletteUrl": "https://colordesigner.io/color-palette-builder?mode=lch#333333-FFC800-12A6BA-978253-000000"
+		},
+		"minersFortune": {
+			"name": "Miner's Fortune",
+			"colors": {
+				"primary-color":  "#4B91CE",
+				"secondary-color":  "#002D61",
+				"accent-color":  "#FDB926",
+				"highlight-color":  "#8C2131",
+				"buttontext-color":  "#FFFFFF"
+			},
+			"fonts": {
+				"font-family-primary": "Trebuchet MS",
+				"font-family-fallback": "Helvetica",
+				"title-font-primary": "Caesar Dressing",
+				"title-font-fallback": "cursive"
+			},
+			"paletteUrl": "https://colordesigner.io/color-palette-builder?mode=lch#4B91CE-002D61-FDB926-8C2131-FFFFFF"
+		},
+		"mossyAcres": {
+			"name": "Mossy Acres",
+			"colors": {
+				"primary-color":  "#EBF4E1",
+				"secondary-color":  "#69805B",
+				"accent-color":  "#398E3D",
+				"highlight-color":  "#28572B",
+				"buttontext-color":  "#F5F5F5"
+			},
+			"fonts": {
+				"font-family-primary": "Trebuchet MS",
+				"font-family-fallback": "Helvetica",
+				"title-font-primary": "Caesar Dressing",
+				"title-font-fallback": "cursive"
+			},
+			"paletteUrl": "https://colordesigner.io/color-palette-builder?mode=lch#EBF4E1-69805B-398E3D-28572B-F5F5F5"
+		},
+		"nevermore": {
+			"name": "Nevermore",
+			"colors": {
+				"primary-color":  "#241773",
+				"secondary-color":  "#000000",
+				"accent-color":  "#CEA635",
+				"highlight-color":  "#141414",
+				"buttontext-color":  "#FFFFFF"
+			},
+			"fonts": {
+				"font-family-primary": "Trebuchet MS",
+				"font-family-fallback": "Helvetica",
+				"title-font-primary": "Caesar Dressing",
+				"title-font-fallback": "cursive"
+			},
+			"paletteUrl": "https://colordesigner.io/color-palette-builder?mode=lch#231773-000000-CEA635-141414-FFFFFF"
+		},
+		"the-Oh": {
+			"name": "THEE",
+			"colors": {
+				"primary-color":  "#c9c9c9",
+				"secondary-color":  "#666666",
+				"accent-color":  "#BD0000",
+				"highlight-color":  "#0D0D0D",
+				"buttontext-color":  "#F5F5F5"
+			},
+			"fonts": {
+				"font-family-primary": "Trebuchet MS",
+				"font-family-fallback": "Helvetica",
+				"title-font-primary": "Caesar Dressing",
+				"title-font-fallback": "cursive"
+			},
+			"paletteUrl": "https://colordesigner.io/color-palette-builder?mode=lch#c9c9c9-666666-BD0000-0D0D0D-F5F5F5"
+		},
+		"waterBirds": {
+			"name": "Water Birds",
+			"colors": {
+				"primary-color":  "#002244",
+				"secondary-color":  "#A5ACAF",
+				"accent-color":  "#69BE28",
+				"highlight-color":  "#0088FF",
+				"buttontext-color":  "#FFFFFF"
+			},
+			"fonts": {
+				"font-family-primary": "Trebuchet MS",
+				"font-family-fallback": "Helvetica",
+				"title-font-primary": "Caesar Dressing",
+				"title-font-fallback": "cursive"
+			},
+			"paletteUrl": "https://colordesigner.io/color-palette-builder?mode=lch#002142-A6ADB0-69BD28-0088FF-FFFFFF"
+		}
+	}
+}

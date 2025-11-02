@@ -1,0 +1,1094 @@
+{
+	"apiLibrary": {
+		"adHocGet": {
+			"name": "Ad-Hoc GET",
+			"method": "GET",
+			"url": "",
+			"queryParameters": [],
+			"bodyParameters": []
+		},
+		"adHocPost": {
+			"name": "Ad-Hoc POST",
+			"method": "POST",
+			"url": "",
+			"queryParameters": [],
+			"bodyParameters": []
+		},
+		"accrualsAccrualBalances": {
+			"name": "Accruals - Accrual Balances",
+			"method": "POST",
+			"url": "/v1/timekeeping/timecard_metrics/multi_read",
+			"queryParameters": [],
+			"bodyParametersHelp": "All parameters are required.",
+			"bodyParameters": [
+				{
+					"name": "startDate",
+					"type": "date",
+					"defaultValue": "today",
+					"path": "where.employeeSet.dateRange.startDate",
+					"validation": {
+						"maxRange": 365,
+						"relatedField": "endDate"
+					}
+				},
+				{
+					"name": "endDate",
+					"type": "date",
+					"defaultValue": "today",
+					"path": "where.employeeSet.dateRange.endDate",
+					"validation": {
+						"maxRange": 365,
+						"relatedField": "startDate"
+					}
+				},
+				{
+					"name": "personnumber",
+					"description": "personnumber",
+					"type": "multi-text",
+					"defaultValue": [
+						""
+					],
+					"path": "where.employeeSet.employees.qualifiers",
+					"validation": {
+						"minEntered": 1,
+						"maxEntered": 10,
+						"pattern": "^[a-zA-Z0-9]+$",
+						"errorMessage": "Employee IDs must be alphanumeric and unique."
+					}
+				}
+			],
+			"requestProfile": {
+				"select": [
+					"ACCRUAL_SUMMARY"
+				],
+				"where": {
+					"employeeSet": {
+						"dateRange": {
+							"startDate": "2025-01-01",
+							"endDate": "2025-01-20"
+						},
+						"employees": {
+							"qualifiers": [
+								""
+							]
+						}
+					}
+				},
+				"rollupContext": {
+					"byDateRange": true,
+					"byEmployee": true
+				}
+			}
+		},
+		"accrualsAccrualTransactions": {
+			"name": "Accruals - Accrual Transactions",
+			"method": "POST",
+			"url": "/v1/timekeeping/timecard_metrics/multi_read",
+			"queryParameters": [],
+			"bodyParametersHelp": "All parameters are required.",
+			"bodyParameters": [
+				{
+					"name": "startDate",
+					"type": "date",
+					"defaultValue": "today",
+					"path": "where.employeeSet.dateRange.startDate",
+					"validation": {
+						"maxRange": 365,
+						"relatedField": "endDate"
+					}
+				},
+				{
+					"name": "endDate",
+					"type": "date",
+					"defaultValue": "today",
+					"path": "where.employeeSet.dateRange.endDate",
+					"validation": {
+						"maxRange": 365,
+						"relatedField": "startDate"
+					}
+				},
+				{
+					"name": "personnumber",
+					"description": "personnumber",
+					"type": "multi-text",
+					"defaultValue": [
+						""
+					],
+					"path": "where.employeeSet.employees.qualifiers",
+					"validation": {
+						"minEntered": 1,
+						"maxEntered": 10,
+						"pattern": "^[a-zA-Z0-9]+$",
+						"errorMessage": "Employee IDs must be alphanumeric and unique."
+					}
+				}
+			],
+			"requestProfile": {
+				"select": [
+					"ACCRUAL_TRANSACTIONS"
+				],
+				"where": {
+					"employeeSet": {
+						"dateRange": {
+							"startDate": "2025-01-01",
+							"endDate": "2025-01-20"
+						},
+						"employees": {
+							"qualifiers": [
+								""
+							]
+						}
+					}
+				}
+			}
+		},
+		"attendanceAttendanceBalances": {
+			"name": "Attendance - Attendance Balances",
+			"method": "POST",
+			"url": "/v1/attendance/balances/multi_read",
+			"queryParameters": [],
+			"bodyParametersHelp": "Dates and personnumber(s) are required.",
+			"bodyParameters": [
+				{
+					"name": "isManagerRole",
+					"type": "boolean",
+					"options": [
+						true,
+						false
+					],
+					"defaultValue": "true",
+					"path": "isManagerRole"
+				},
+				{
+					"name": "startDate",
+					"type": "date",
+					"defaultValue": "today",
+					"path": "dateRange.startDate"
+				},
+				{
+					"name": "endDate",
+					"type": "date",
+					"defaultValue": "today",
+					"path": "dateRange.endDate"
+				},
+				{
+					"name": "personnumber",
+					"description": "personnumber",
+					"type": "multi-text",
+					"defaultValue": [
+						""
+					],
+					"path": "employees.qualifiers",
+					"validation": {
+						"minEntered": 1,
+						"maxEntered": 10,
+						"pattern": "^[a-zA-Z0-9]+$",
+						"errorMessage": "Invalid Value."
+					}
+				}
+			],
+			"requestProfile": {
+				"dateRange": {
+					"endDate": "2025-01-01",
+					"startDate": "2025-01-01"
+				},
+				"employees": {
+					"qualifiers": [
+						""
+					]
+				},
+				"isManagerRole": true
+			}
+		},
+		"integrationsInstalled": {
+			"name": "Integrations - Installed Integrations",
+			"method": "GET",
+			"url": "/v1/platform/integrations"
+		},
+		"integrationsRunResults": {
+			"name": "Integrations - Run Results",
+			"method": "GET",
+			"url": "/v1/platform/integration_executions",
+			"queryParametersHelp": "Dates are required & integrationId is optional.",
+			"queryParameters": [
+				{
+					"name": "fromDate",
+					"type": "date",
+					"defaultValue": "-30"
+				},
+				{
+					"name": "toDate",
+					"type": "date",
+					"defaultValue": "+1"
+				},
+				{
+					"name": "integrationId",
+					"type": "text",
+					"defaultValue": ""
+				}
+			]
+		},
+		"integrationsScheduled": {
+			"name": "Integrations - Scheduled Integrations",
+			"method": "GET",
+			"url": "/v1/platform/integration_schedules",
+			"queryParametersHelp": "Dates are required & integrationId is optional.",
+			"queryParameters": [
+				{
+					"name": "fromDate",
+					"type": "date",
+					"defaultValue": "1753-01-01"
+				},
+				{
+					"name": "toDate",
+					"type": "date",
+					"defaultValue": "3000-01-01"
+				},
+				{
+					"name": "integrationId",
+					"type": "text",
+					"defaultValue": ""
+				}
+			],
+			"exportMap": "IntegrationsScheduled"
+		},
+		"licensingEntitlementSummary": {
+			"name": "Licensing - Entitlement Summary",
+			"method": "GET",
+			"url": "/v1/licensing/entitlement_summary",
+			"exportMap": "EntitlementSummary"
+		},
+		"reportingGetReportDataObjects": {
+			"name": "Reporting - Get Report Data Objects",
+			"method": "GET",
+			"url": "/v1/platform/report_dataobjects",
+			"queryParametersHelp": "RDO name is optional. All are returned by default.",
+			"queryParameters": [
+				{
+					"name": "RDO name",
+					"type": "text",
+					"options": [],
+					"defaultValue": ""
+				}
+			]
+		},
+		"personsExtensions": {
+			"name": "Persons - Person Extensions",
+			"method": "POST",
+			"url": "/v1/commons/persons/extensions/multi_read",
+			"queryParameters": [],
+			"bodyParametersHelp": "All Extensions returned unless you select one. Personnumber(s) required.",
+			"bodyParameters": [
+				{
+					"name": "failOnNoAssignment",
+					"type": "boolean",
+					"options": [
+						false,
+						true
+					],
+					"defaultValue": "false",
+					"path": "failOnNoAssignment"
+				},
+				{
+					"name": "returnUnassignedEmployees",
+					"type": "boolean",
+					"options": [
+						true,
+						false
+					],
+					"defaultValue": "true",
+					"path": "returnUnassignedEmployees"
+				},
+				{
+					"name": "includeAccrualPolicyDetails",
+					"type": "boolean",
+					"options": [
+						true,
+						false
+					],
+					"defaultValue": "true",
+					"path": "where.includeAccrualPolicyDetails"
+				},
+				{
+					"name": "includeBaseWages",
+					"type": "boolean",
+					"options": [
+						true,
+						false
+					],
+					"defaultValue": "true",
+					"path": "where.includeBaseWages"
+				},
+				{
+					"name": "isEmployeeAllowed",
+					"type": "boolean",
+					"options": [
+						true,
+						false
+					],
+					"defaultValue": "true",
+					"path": "where.isEmployeeAllowed"
+				},
+				{
+					"name": "onlyActivePerson",
+					"type": "boolean",
+					"options": [
+						false,
+						true
+					],
+					"defaultValue": "false",
+					"path": "where.onlyActivePerson"
+				},
+				{
+					"name": "extensionType",
+					"description": "ALL",
+					"type": "select",
+					"options": [
+						"accrual",
+						"device",
+						"employee",
+						"scheduling",
+						"timekeeping"
+					],
+					"defaultValue": "",
+					"path": "where.extensionType"
+				},
+				{
+					"name": "snapshotDate",
+					"type": "date",
+					"defaultValue": "+0",
+					"path": "where.snapshotDate"
+				},
+				{
+					"name": "personnumber",
+					"description": "personnumber",
+					"type": "multi-text",
+					"defaultValue": [
+						""
+					],
+					"path": "where.employees.values",
+					"validation": {
+						"minEntered": 1,
+						"maxEntered": 10,
+						"pattern": "^[a-zA-Z0-9]+$",
+						"errorMessage": "Employee IDs must be alphanumeric and unique."
+					}
+				}
+			],
+			"requestProfile": {
+				"failOnNoAssignment": true,
+				"returnUnassignedEmployees": true,
+				"where": {
+					"employees": {
+						"key": "personnumber",
+						"values": [
+							"string"
+						]
+					},
+					"extensionType": "accrual",
+					"includeAccrualPolicyDetails": true,
+					"includeBaseWages": "string",
+					"isEmployeeAllowed": true,
+					"onlyActivePerson": true,
+					"snapshotDate": "string"
+				}
+			}
+		},
+		"personsPayPeriodTimeSpans": {
+			"name": "Persons - Pay Period Time Spans",
+			"method": "GET",
+			"url": "/v1/commons/pay_period",
+			"queryParametersHelp": "Enter Employee ID (can be retrieved via Persons - Person Extensions) & Select Date OR Symbolic Period.",
+			"queryParameters": [
+				{
+					"name": "employee_id",
+					"type": "text",
+					"defaultValue": "ID (not personnum)"
+				},
+				{
+					"name": "date",
+					"type": "date",
+					"description": "Date In Current Year",
+					"defaultValue": ""
+				},
+				{
+					"name": "period_type",
+					"type": "select",
+					"options": [
+						"Previous",
+						"Current",
+						"Next"
+					],
+					"defaultValue": "",
+					"description": "Symbolic Period"
+				}
+			]
+		},
+		"schedulingSchedules": {
+			"name": "Scheduling - Schedules",
+			"method": "POST",
+			"url": "/v1/scheduling/schedule/multi_read",
+			"queryParameters": [],
+			"bodyParametersHelp": "Dates and personnumber required.",
+			"bodyParameters": [
+				{
+					"name": "partialSuccess",
+					"type": "boolean",
+					"options": [
+						true,
+						false
+					],
+					"defaultValue": "true",
+					"path": "multiReadOptions.partialSuccess"
+				},
+				{
+					"name": "excludeOvernightShiftsOnStartDate",
+					"type": "boolean",
+					"options": [
+						false,
+						true
+					],
+					"defaultValue": "false",
+					"path": "multiReadOptions.excludeOvernightShiftsOnStartDate"
+				},
+				{
+					"name": "excludeBreaks",
+					"type": "boolean",
+					"options": [
+						false,
+						true
+					],
+					"defaultValue": "false",
+					"path": "where.excludeBreaks"
+				},
+				{
+					"name": "startDate",
+					"type": "date",
+					"defaultValue": "today",
+					"path": "where.employees.dateRange.startDate",
+					"validation": {
+						"maxRange": 365,
+						"relatedField": "endDate"
+					}
+				},
+				{
+					"name": "endDate",
+					"type": "date",
+					"defaultValue": "today",
+					"path": "where.employees.dateRange.endDate",
+					"validation": {
+						"maxRange": 365,
+						"relatedField": "startDate"
+					}
+				},
+				{
+					"name": "personnumber",
+					"description": "personnumber",
+					"type": "multi-text",
+					"defaultValue": [
+						""
+					],
+					"path": "where.employees.employees.qualifiers",
+					"validation": {
+						"minEntered": 1,
+						"maxEntered": 10,
+						"pattern": "^[a-zA-Z0-9]+$",
+						"errorMessage": "Employee IDs must be alphanumeric and unique."
+					}
+				}
+			],
+			"requestProfile": {
+				"multiReadOptions": {
+					"excludeOvernightShiftsOnStartDate": true,
+					"partialSuccess": true
+				},
+				"where": {
+					"employees": {
+						"dateRange": {
+							"endDate": "2025-01-01",
+							"startDate": "2025-01-01"
+						},
+						"employees": {
+							"qualifiers": [
+								""
+							]
+						}
+					},
+					"excludeBreaks": false
+				}				
+			}
+		},
+		"setupAccrualCodes": {
+			"name": "Setup - Accrual Codes",
+			"method": "GET",
+			"url": "/v2/timekeeping/setup/accrual_codes",
+			"queryParameters": [],
+			"exportMap": "SetupAccrualCodes"
+		},
+		"setupAccrualProfiles": {
+			"name": "Setup - Accrual Profiles",
+			"method": "GET",
+			"url": "/v2/timekeeping/setup/accrual_profiles",
+			"queryParameters": [],
+			"exportMap": "SetupAccrualProfiles"
+		},
+		"setupActivityProfiles": {
+			"name": "Setup - Activity Profiles",
+			"method": "GET",
+			"url": "/v1/work/activity_profiles",
+			"queryParametersHelp": "Activity profile name is optional",
+			"queryParameters": [
+				{
+					"name": "Activity Profile Name",
+					"type": "text",
+					"defaultValue": ""
+				}
+			]
+		},
+		"setupAttendanceProfiles": {
+			"name": "Setup - Attendance Profiles",
+			"method": "GET",
+			"url": "/v1/attendance/attendance_profiles",
+			"queryParametersHelp": "all_details is optional",
+			"queryParameters": [
+				{
+					"name": "all_details",
+					"type": "select",
+					"description": "false",
+					"options": [
+						"false",
+						"true"
+					],
+					"defaultValue": "false"
+				}
+			]
+		},
+		"setupBusinessStructureandJobs": {
+			"name": "Setup - Business Structure and Jobs",
+			"method": "POST",
+			"url": "/v1/commons/locations/multi_read",
+			"queryParameters": [],
+			"bodyParameters": [
+				{
+					"name": "includeOrgPathDetails",
+					"type": "boolean",
+					"options": [
+						true,
+						false
+					],
+					"defaultValue": "true",
+					"path": "multiReadOptions.includeOrgPathDetails"
+				},
+				{
+					"name": "context",
+					"type": "select",
+					"options": [
+						"FORECAST",
+						"ORG"
+					],
+					"defaultValue": "FORECAST",
+					"path": "where.descendantsOf.context"
+				},
+				{
+					"name": "date",
+					"type": "date",
+					"defaultValue": "+0",
+					"path": "where.descendantsOf.date",
+					"validation": {
+						"maxRange": 365,
+						"relatedField": "startDate"
+					}
+				}
+			],
+			"requestProfile": {
+				"multiReadOptions": {
+					"includeOrgPathDetails": true
+				},
+				"where": {
+					"descendantsOf": {
+						"context": "ORG",
+						"date": "2025-01-25",
+						"locationRef": {
+							"id": -1
+						}
+					}
+				}
+			}
+		},
+		"setupBusinessStructureCostCenters": {
+			"name": "Setup - Business Structure Cost Centers",
+			"method": "GET",
+			"url": "/v2/commons/cost_centers",
+			"queryParameters": [],
+			"exportMap": "SetupBSCostCenters"
+		},
+		"setupBusinessStructureLaborCategories": {
+			"name": "Setup - Business Structure Labor Categories",
+			"method": "GET",
+			"url": "/v2/commons/labor_categories",
+			"queryParameters": [],
+			"exportMap": "SetupBSLaborCategories"
+		},
+		"setupBusinessStructureLaborCategoryEntries": {
+			"name": "Setup - Business Structure Labor Category Entries",
+			"method": "POST",
+			"url": "/v1/commons/labor_entries/apply_read",
+			"queryParameters": [],
+			"requestProfile": {
+				"sortBy": {
+					"key": "laborCategory",
+					"sortDirection": "ascending"
+				},
+				"where": {
+					"filterCriteria": {
+						"supportPartialStringMatch": true
+					}
+				}
+			},
+			"exportMap": "SetupBSLabCatEntries"
+		},
+		"setupCommonHyperfindsPublic": {
+			"name": "Setup - Common Hyperfinds (Public)",
+			"method": "GET",
+			"url": "/v1/commons/hyperfind/public",
+			"queryParametersHelp": "all_details is optional.",
+			"queryParameters": [
+				{
+					"name": "all_details",
+					"type": "select",
+					"description": "false",
+					"options": [
+						"false",
+						"true"
+					],
+					"defaultValue": "false"
+				}
+			],
+			"exportMap": "SetupPublicHFQs"
+		},
+		"setupLeaveProfiles": {
+			"name": "Setup - Leave Profiles",
+			"method": "GET",
+			"url": "/v1/leave/leave_profiles",
+			"queryParametersHelp": "Leave profile name is optional.",
+			"queryParameters": [
+				{
+					"name": "Leave Profile Name",
+					"type": "text",
+					"description": "Enter value",
+					"defaultValue": ""
+				}
+			]
+		},
+		"setupTimekeepingAdjustmentRules": {
+			"name": "Setup - Timekeeping Adjustment Rules",
+			"method": "GET",
+			"url": "/v1/timekeeping/setup/adjustment_rules",
+			"queryParametersHelp": "All parameters are optional. All rule versions returned by default.",
+			"queryParameters": [
+				{
+					"name": "Adjustment Rule Name",
+					"type": "text",
+					"defaultValue": ""
+				},
+				{
+					"name": "start_date",
+					"type": "date",
+					"defaultValue": "1753-01-01"
+				},
+				{
+					"name": "end_date",
+					"type": "date",
+					"defaultValue": "3000-01-01"
+				},
+				{
+					"name": "all_details",
+					"type": "select",
+					"description": "false",
+					"options": [
+						"false",
+						"true"
+					],
+					"defaultValue": "false"
+				}
+			]
+		},
+		"setupTimekeepingBonusAndDeductions": {
+			"name": "Setup - Timekeeping Bonus/Deductions",
+			"method": "GET",
+			"url": "/v2/timekeeping/setup/deduct_rules",
+			"queryParameters": [],
+			"exportMap": "SetupTKBonusDeductions"
+		},
+		"setupTimekeepingBreakRules": {
+			"name": "Setup - Timekeeping Break Rules",
+			"method": "GET",
+			"url": "/v2/timekeeping/setup/break_rules",
+			"queryParameters": [],
+			"exportMap": "SetupTKBreakRules"
+		},
+		"setupTimekeepingCombinationRules": {
+			"name": "Setup - Timekeeping Combination Rules",
+			"method": "GET",
+			"url": "/v1/timekeeping/setup/combination_rules",
+			"queryParameters": []
+		},
+		"setupTimekeepingCombinedPayCodes": {
+			"name": "Setup - Timekeeping Combined Pay Codes",
+			"method": "POST",
+			"url": "/v1/timekeeping/setup/paycodes/combined/apply_read",
+			"queryParameters": [],
+			"bodyParametersHelp": "Combined pay code name is optional. All are returned by default.",
+			"bodyParameters": [
+				{
+					"name": "Combined Pay Code Name",
+					"description": "Combined Pay Code",
+					"type": "multi-text",
+					"defaultValue": [
+						"all"
+					],
+					"path": "where.combinedPayCodes.qualifiers",
+					"validation": {
+						"minEntered": 1,
+						"maxEntered": 1000,
+						"pattern": "^[a-zA-Z0-9]+$",
+						"errorMessage": "NA."
+					}
+				}
+			],
+			"preRequest": {
+				"apiKey": "setupTimekeepingPayCodes",
+				"responseFilter": {
+					"field": "combined",
+					"match": true,
+					"mapTo": "name",
+					"data-path": "where.combinedPayCodes.qualifiers"
+				}
+			},
+			"requestProfile": {
+				"where": {
+					"combinedPayCodes": {
+						"qualifiers": [
+							"all"
+						]
+					}
+				}
+			},
+			"exportMap": "SetupTKCombinedPaycodes"
+		},
+		"setupTimekeepingFixedRules": {
+			"name": "Setup - Timekeeping Fixed Rules",
+			"method": "GET",
+			"url": "/v1/timekeeping/setup/fixed_rules",
+			"queryParameters": [],
+			"exportMap": "SetupTKFixedRules"
+		},
+		"setupTimekeepingOvertimeRules": {
+			"name": "Setup - Timekeeping Overtime Rules",
+			"method": "GET",
+			"url": "/v1/timekeeping/setup/overtime_rules",
+			"queryParameters": [],
+			"exportMap": "SetupTKOTRules"
+		},
+		"setupTimekeepingPayCodes": {
+			"name": "Setup - Timekeeping Pay Code Definitions",
+			"method": "GET",
+			"url": "/v2/timekeeping/setup/pay_codes",
+			"queryParameters": [],
+			"exportMap": "SetupTKPayCodes"
+		},
+		"setupTimekeepingPayCodeDistributions": {
+			"name": "Setup - Timekeeping Pay Code Distributions",
+			"method": "GET",
+			"url": "/v1/timekeeping/setup/pay_code_distributions",
+			"queryParametersHelp": "PCD name is optional. All are returned by default.",
+			"queryParameters": [
+				{
+					"name": "PCD Name",
+					"type": "text",
+					"defaultValue": ""
+				}
+			]
+		},
+		"setupTimekeepingPayRules": {
+			"name": "Setup - Timekeeping Pay Rules",
+			"method": "GET",
+			"url": "/v2/timekeeping/setup/payrules",
+			"queryParametersHelp": "All parameters are optional. All Pay Rules returned by default.",
+			"queryParameters": [
+				{
+					"name": "Payrule Name",
+					"type": "text",
+					"defaultValue": ""
+				},
+				{
+					"name": "all_details",
+					"type": "select",
+					"description": "true",
+					"options": [
+						"true",
+						"false"
+					],
+					"defaultValue": "true"
+				}
+			]
+		},
+		"setupTimekeepingWorkRules": {
+			"name": "Setup - Timekeeping Work Rules",
+			"method": "GET",
+			"url": "/v1/timekeeping/setup/full_work_rules",
+			"queryParameters": [
+				{
+					"name": "snapshotdate",
+					"type": "date",
+					"defaultValue": "+0"
+				}
+			]
+		},
+		"timekeepingPunches": {
+			"name": "Timekeeping - Punches",
+			"method": "POST",
+			"url": "/v1/timekeeping/timecard/multi_read",
+			"queryParametersHelp": "Partial Success is optional.",
+			"queryParameters": [
+				{
+					"name": "partial_success",
+					"type": "select",
+					"description": "true",
+					"options": [
+						"true",
+						"false"
+					],
+					"defaultValue": "true"
+				}
+			],
+			"bodyParametersHelp": "All parameters are required.",
+			"bodyParameters": [
+				{
+					"name": "includePhantomPunches",
+					"type": "boolean",
+					"options": [
+						false,
+						true
+					],
+					"defaultValue": "false",
+					"path": "multiReadOptions.includePhantomPunches"
+				},
+				{
+					"name": "startDate",
+					"type": "date",
+					"defaultValue": "",
+					"path": "where.dateRange.startDate",
+					"validation": {
+						"maxRange": 365,
+						"relatedField": "endDate"
+					}
+				},
+				{
+					"name": "endDate",
+					"type": "date",
+					"defaultValue": "",
+					"path": "where.dateRange.endDate",
+					"validation": {
+						"maxRange": 365,
+						"relatedField": "startDate"
+					}
+				},
+				{
+					"name": "personnumber",
+					"description": "personnumber",
+					"type": "multi-text",
+					"defaultValue": [
+						""
+					],
+					"path": "where.employees.qualifiers",
+					"validation": {
+						"minEntered": 1,
+						"maxEntered": 10,
+						"pattern": "^[a-zA-Z0-9]+$",
+						"errorMessage": "Employee IDs must be alphanumeric and unique."
+					}
+				}
+			],
+			"requestProfile": {
+				"multiReadOptions": {
+					"includePhantomPunches": false
+				},
+				"select": [
+					"PUNCHES"
+				],
+				"where": {
+					"dateRange": {
+						"endDate": "2025-01-20",
+						"startDate": "2025-01-20"
+					},
+					"employees": {
+						"qualifiers": [
+							""
+						]
+					}
+				}
+			}
+		},
+		"timekeepingTimecards": {
+			"name": "Timekeeping - Timecards",
+			"method": "POST",
+			"url": "/v1/timekeeping/timecard/multi_read",
+			"queryParametersHelp": "Partial Success is optional.",
+			"queryParameters": [
+				{
+					"name": "partial_success",
+					"type": "select",
+					"description": "true",
+					"options": [
+						"true",
+						"false"
+					],
+					"defaultValue": "true"
+				}
+			],
+			"bodyParametersHelp": "Dates and personnumber required. All Timecard Items returned when none selected.",
+			"bodyParameters": [
+				{
+					"name": "combineWorkShiftAtMidnight",
+					"type": "boolean",
+					"options": [
+						true,
+						false
+					],
+					"defaultValue": "true",
+					"path": "multiReadOptions.combineWorkShiftAtMidnight"
+				},
+				{
+					"name": "includeHiddenPayCodeEdits",
+					"type": "boolean",
+					"options": [
+						false,
+						true
+					],
+					"defaultValue": "false",
+					"path": "multiReadOptions.includeHiddenPayCodeEdits"
+				},
+				{
+					"name": "showTotalsWithHiddenPaycodes",
+					"type": "boolean",
+					"options": [
+						false,
+						true
+					],
+					"defaultValue": "false",
+					"path": "multiReadOptions.showTotalsWithHiddenPaycodes"
+				},
+				{
+					"name": "totalsIncludeCombinedPaycodes",
+					"type": "boolean",
+					"options": [
+						false,
+						true
+					],
+					"defaultValue": "false",
+					"path": "multiReadOptions.totalsIncludeCombinedPaycodes"
+				},
+				{
+					"name": "Timecard Items",
+					"type": "multi-select",
+					"options": [
+						"WORKED_SHIFTS",
+						"PAYCODE_EDITS",
+						"HOURS_WORKED",
+						"HOLIDAY_CREDITS",
+						"MOVE_AMOUNTS",
+						"HISTORICAL_CORRECTIONS",
+						"PROJECTS",
+						"TOTALS",
+						"SCHEDULE_SHIFT",
+						"SCHEDULED_TOTALS",
+						"ACTIVITY_SHIFTS",
+						"ACTIVITY_TOTALS"
+					],
+					"defaultValue": [
+						"WORKED_SHIFTS"
+					],
+					"path": "select",
+					"validation": {
+						"minSelected": 1,
+						"maxSelected": 9
+					}
+				},
+				{
+					"name": "totalsRollupBy",
+					"type": "select",
+					"options": [
+						"ACTIVITY_EVENT",
+						"ALL",
+						"DAILY",
+						"PERIOD_TO_DATE",
+						"RAW",
+						"SHIFT",
+						"TIMEITEM"
+					],
+					"defaultValue": "RAW",
+					"path": "multiReadOptions.totalsRollupBy"
+				},
+				{
+					"name": "startDate",
+					"type": "date",
+					"defaultValue": "today",
+					"path": "where.dateRange.startDate",
+					"validation": {
+						"maxRange": 365,
+						"relatedField": "endDate"
+					}
+				},
+				{
+					"name": "endDate",
+					"type": "date",
+					"defaultValue": "today",
+					"path": "where.dateRange.endDate",
+					"validation": {
+						"maxRange": 365,
+						"relatedField": "startDate"
+					}
+				},
+				{
+					"name": "personnumber",
+					"description": "personnumber",
+					"type": "multi-text",
+					"defaultValue": [
+						""
+					],
+					"path": "where.employees.qualifiers",
+					"validation": {
+						"minEntered": 1,
+						"maxEntered": 10,
+						"pattern": "^[a-zA-Z0-9]+$",
+						"errorMessage": "Employee IDs must be alphanumeric and unique."
+					}
+				}
+			],
+			"requestProfile": {
+				"multiReadOptions": {
+					"combineWorkShiftAtMidnight": true,
+					"includeHiddenPayCodeEdits": false,
+					"showTotalsWithHiddenPaycodes": false,
+					"totalsIncludeCombinedPaycodes": false,
+					"totalsRollupBy": ""
+				},
+				"select": [
+					""
+				],
+				"where": {
+					"dateRange": {
+						"endDate": "2025-01-20",
+						"startDate": "2025-01-20"
+					},
+					"employees": {
+						"qualifiers": [
+							""
+						]
+					}
+				}
+			}
+		}
+	}
+}
